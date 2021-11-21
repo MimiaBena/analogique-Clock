@@ -1,6 +1,7 @@
 body{
     text-align: center;
     background-color: black;
+      background-image: url(image/photo.jpg);
     
 }
 
@@ -38,7 +39,7 @@ body{
     position: absolute;
     width: 5px;
     height: 100%;
-    background: #1df52f;
+    background: pink;
     z-index: 0;
     left: 49%;
 }
@@ -57,4 +58,63 @@ width: 3px;
 }
 .clock_four{
     transform: rotate(150deg);
+}
+.inner-clock-face {
+
+position: absolute;
+top: 10%;
+left: 10%;
+width: 80%;
+height: 80%;
+background: #282828;
+-webkit-border-radius: 100%;
+-moz-border-radius: 100%;
+border-radius: 100%;
+z-index: 1;
+}
+
+.inner-clock-face::before {
+
+content: '';
+position: absolute;
+top: 50%;
+border-radius: 18px;
+margin-left: -9px;
+margin-top: -6px;
+left: 50%;
+width: 16px;
+height: 16px;
+background: pink;
+z-index: 11;
+}
+
+.hms {
+
+width: 50%;
+right: 50%;
+height: 6px;
+background: hotpink;
+position: absolute;
+top: 50%;
+border-radius: 6px;
+transform-origin: 100%;
+transform: rotate(90deg);
+transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+.hms.hour-hms {
+
+width: 30%;
+z-index: 3;
+}
+.hms.min-hms {
+
+height: 3px;
+z-index: 10;
+width: 40%;
+}
+.hms.second-hms {
+
+background: pink;
+width: 45%;
+height: 2px;
 }
